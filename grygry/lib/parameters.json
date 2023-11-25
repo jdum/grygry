@@ -1,0 +1,73 @@
+{
+    "_default_": {
+        "show_unicode_error": false,
+        "sort_files": false,
+        "context_lines": 0,
+        "with_suffix": [],
+        "no_suffix": [
+            ".png",
+            ".jpg",
+            ".bmp",
+            ".ttf",
+            ".svg",
+            ".ico",
+            ".lock",
+            ".orig"
+        ],
+        "no_start_dir": [".", "__pycache__"],
+        "no_start_file": [".", "~"]
+    },
+    "all": {},
+    "py": {
+        "with_suffix": [".py"],
+        "sort_files": true,
+        "context_lines": 1
+    },
+    "py2": {
+        "with_suffix": [".py"],
+        "sort_files": true,
+        "context_lines": 2
+    },
+    "py0": {
+        "with_suffix": [".py"],
+        "sort_files": true,
+        "context_lines": 0
+    },
+    "nopy": {
+        "no_suffix": [
+            ".py",
+            ".png",
+            ".jpg",
+            ".bmp",
+            ".ttf",
+            ".svg",
+            ".ico",
+            ".orig"
+        ]
+    },
+    "md": { "with_suffix": [".md", ".MD"] },
+    "txt": { "with_suffix": [".txt", ".TXT"] },
+    "cfg": { "with_suffix": [".cfg", ".ini", ".INI", ".CFG"] },
+    "rb": { "with_suffix": [".rb"] },
+    "js": { "with_suffix": [".js", ".JS", ".ts", ".vue"] },
+    "css": { "with_suffix": [".css", ".CSS"] },
+    "json": { "with_suffix": [".json", ".JSON"] },
+    "toml": { "with_suffix": [".toml", ".TOML"] },
+    "html": { "with_suffix": [".html", ".htm", ".HTML", ".HTM"] },
+    "htmlall": {
+        "with_suffix": [
+            ".html",
+            ".htm",
+            ".js",
+            ".ts",
+            ".vue",
+            ".css",
+            ".HTML",
+            ".HTM",
+            ".JS",
+            ".CSS"
+        ]
+    },
+    "yml": { "with_suffix": [".yml", ".yaml", ".YML", ".YAML"] },
+    "sh": { "with_suffix": [".sh"] }
+}
