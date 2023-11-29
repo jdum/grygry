@@ -1,7 +1,7 @@
 {
     "_default_": {
         "show_unicode_error": false,
-        "sort_files": false,
+        "sort_files": true,
         "context_lines": 0,
         "with_suffix": [],
         "no_suffix": [
@@ -20,20 +20,22 @@
     "all": {},
     "py": {
         "with_suffix": [".py"],
-        "sort_files": true,
+        "no_start_dir": [".", "__pycache__", "tests"],
         "context_lines": 1
     },
     "py2": {
         "with_suffix": [".py"],
-        "sort_files": true,
+        "no_start_dir": [".", "__pycache__", "tests"],
         "context_lines": 2
     },
     "py0": {
         "with_suffix": [".py"],
-        "sort_files": true,
+        "no_start_dir": [".", "__pycache__", "tests"],
         "context_lines": 0
     },
     "nopy": {
+        "no_start_dir": [".", "__pycache__", "tests"],
+        "context_lines": 1,
         "no_suffix": [
             ".py",
             ".png",
