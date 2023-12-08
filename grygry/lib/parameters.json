@@ -70,6 +70,9 @@
             ".CSS"
         ]
     },
-    "yml": { "with_suffix": [".yml", ".yaml", ".YML", ".YAML"] },
+    "yml": {
+        "context_lines": 2,
+        "with_suffix": [".yml", ".yaml", ".YML", ".YAML"]
+    },
     "sh": { "with_suffix": [".sh"] }
 }
