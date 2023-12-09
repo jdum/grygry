@@ -2,6 +2,8 @@
     "_default_": {
         "show_unicode_error": false,
         "sort_files": true,
+        "relative_path": false,
+        "path_only": false,
         "context_lines": 0,
         "with_suffix": [],
         "no_suffix": [
@@ -20,16 +22,19 @@
     "all": {},
     "py": {
         "with_suffix": [".py"],
+        "relative_path": true,
         "no_start_dir": [".", "__pycache__", "tests"],
         "context_lines": 1
     },
     "py2": {
         "with_suffix": [".py"],
+        "relative_path": true,
         "no_start_dir": [".", "__pycache__", "tests"],
         "context_lines": 2
     },
     "py0": {
         "with_suffix": [".py"],
+        "relative_path": true,
         "no_start_dir": [".", "__pycache__", "tests"],
         "context_lines": 0
     },
@@ -74,5 +79,9 @@
         "context_lines": 2,
         "with_suffix": [".yml", ".yaml", ".YML", ".YAML"]
     },
-    "sh": { "with_suffix": [".sh"] }
+    "sh": { "with_suffix": [".sh"] },
+    "path": {
+        "relative_path": true,
+        "path_only": true
+    }
 }

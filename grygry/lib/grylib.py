@@ -11,6 +11,8 @@ class Grygry:
     def __init__(self, config: dict):
         self.show_unicode_error = config.get("show_unicode_error", False)
         self.sort_files = config.get("sort_files", False)
+        self.relative_path = config.get("relative_path", False)
+        self.path_only = config.get("path_only", False)
         self.context_lines = config.get("context_lines", 0)
         self.with_suffix = set(config.get("with_suffix", []))
         self.no_suffix = set(config.get("no_suffix", []))
@@ -77,13 +79,20 @@ class Grygry:
         self.show_found(path)
 
     def show_found(self, path: Path) -> None:
-        print(path)
+        self._show_path(path)
+        if self.path_only:
+            return
         sorted_dict = dict(sorted(self.found.items()))
         if self.context_lines:
             self._show_found_context(sorted_dict)
         else:
             self._show_found_no_context(sorted_dict)
         print()
+
+    def _show_path(self, path: Path) -> None:
+        if self.relative_path:
+            path = path.relative_to(Path.cwd())
+        print(path)
 
     def _show_found_context(self, sorted_dict: dict[int, str]) -> None:
         previous = 0
