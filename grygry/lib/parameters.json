@@ -55,7 +55,16 @@
     "md": { "with_suffix": [".md", ".MD"] },
     "txt": { "with_suffix": [".txt", ".TXT"] },
     "cfg": { "with_suffix": [".cfg", ".ini", ".INI", ".CFG"] },
-    "rb": { "with_suffix": [".rb"] },
+    "rb": {
+        "with_suffix": [".rb"],
+        "relative_path": true,
+        "context_lines": 1
+    },
+    "rb0": {
+        "with_suffix": [".rb"],
+        "relative_path": true,
+        "context_lines": 0
+    },
     "js": { "with_suffix": [".js", ".JS", ".ts", ".vue"] },
     "css": { "with_suffix": [".css", ".CSS"] },
     "json": { "with_suffix": [".json", ".JSON"] },

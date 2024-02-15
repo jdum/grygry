@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "grygry"
-version = "2.5.3"
+version = "2.5.4"
 description = "Command line utility to grep different types of source code."
 license = "MIT"
 authors = ["Jerome Dumonteil <jerome.dumonteil@gmail.com>"]
@@ -9,20 +9,18 @@ homepage = "https://github.com/jdum/grygry"
 repository = "https://github.com/jdum/grygry"
 readme = "README.md"
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
-    "Environment :: Console",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Operating System :: OS Independent",
-    "Topic :: Text Processing",
-    "Topic :: Software Development"
+        "Development Status :: 5 - Production/Stable",
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Operating System :: OS Independent",
+        "Topic :: Text Processing",
+        "Topic :: Software Development",
 ]
-packages = [
-    {include = "grygry"}
-]
+packages = [{ include = "grygry" }]
 
 [tool.poetry.scripts]
 gryall = "grygry.grycli:gryall"
@@ -39,6 +37,7 @@ grypy = "grygry.grycli:grypy"
 grypy0 = "grygry.grycli:grypy0"
 grypy2 = "grygry.grycli:grypy2"
 gryrb = "grygry.grycli:gryrb"
+gryrb0 = "grygry.grycli:gryrb0"
 grysh = "grygry.grycli:grysh"
 grytoml = "grygry.grycli:grytoml"
 grytxt = "grygry.grycli:grytxt"
@@ -86,56 +85,57 @@ target-version = "py312"
 line-length = 88
 fix = true
 select = [
-    # flake8-2020
-    "YTT",
-    # flake8-bandit
-    "S",
-    # flake8-bugbear
-    "B",
-    # flake8-builtins
-    "A",
-    # flake8-comprehensions
-    "C4",
-    # flake8-debugger
-    "T10",
-    # flake8-simplify
-    "SIM",
-    # isort
-    "I",
-    # mccabe
-    "C90",
-    # pycodestyle
-    "E", "W",
-    # pyflakes
-    "F",
-    # pygrep-hooks
-    "PGH",
-    # pyupgrade
-    "UP",
-    # ruff
-    "RUF",
-    # tryceratops
-    "TRY",
+        # flake8-2020
+        "YTT",
+        # flake8-bandit
+        "S",
+        # flake8-bugbear
+        "B",
+        # flake8-builtins
+        "A",
+        # flake8-comprehensions
+        "C4",
+        # flake8-debugger
+        "T10",
+        # flake8-simplify
+        "SIM",
+        # isort
+        "I",
+        # mccabe
+        "C90",
+        # pycodestyle
+        "E",
+        "W",
+        # pyflakes
+        "F",
+        # pygrep-hooks
+        "PGH",
+        # pyupgrade
+        "UP",
+        # ruff
+        "RUF",
+        # tryceratops
+        "TRY",
 ]
 ignore = [
-    # LineTooLong
-    "E501",
-    # DoNotAssignLambda
-    "E731",
-    # Use specific rule codes when ignoring type issues
-    "PGH003",
-    # check for execution of untrusted input
-    "S603",
-    # Class attribute `open` is shadowing a Python builtin
-    "A003",
-    # Use `X | Y` in `isinstance` call instead of `(X, Y)`
-    "UP038",
-    # Avoid specifying long messages outside the exception class
-    "TRY003",
-    # Use ternary operator
-    "SIM108",
-    # Use of `assert` detected
-    "S101",
+        # LineTooLong
+        "E501",
+        # DoNotAssignLambda
+        "E731",
+        # Use specific rule codes when ignoring type issues
+        "PGH003",
+        # check for execution of untrusted input
+        "S603",
+        # Class attribute `open` is shadowing a Python builtin
+        "A003",
+        # Use `X | Y` in `isinstance` call instead of `(X, Y)`
+        "UP038",
+        # Avoid specifying long messages outside the exception class
+        "TRY003",
+        # Use ternary operator
+        "SIM108",
+        # Use of `assert` detected
+        "S101",
 ]
 
 [tool.ruff.per-file-ignores]
