@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "grygry"
-version = "2.5.4"
+version = "2.5.5"
 description = "Command line utility to grep different types of source code."
 license = "MIT"
 authors = ["Jerome Dumonteil <jerome.dumonteil@gmail.com>"]
@@ -34,6 +34,7 @@ grymd = "grygry.grycli:grymd"
 grynopy = "grygry.grycli:grynopy"
 grypath = "grygry.grycli:grypath"
 grypy = "grygry.grycli:grypy"
+grypyt = "grygry.grycli:grypyt"
 grypy0 = "grygry.grycli:grypy0"
 grypy2 = "grygry.grycli:grypy2"
 gryrb = "grygry.grycli:gryrb"

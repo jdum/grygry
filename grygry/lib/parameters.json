@@ -26,6 +26,12 @@
         "no_start_dir": [".", "__pycache__", "tests"],
         "context_lines": 1
     },
+    "pyt": {
+        "with_suffix": [".py"],
+        "relative_path": true,
+        "no_start_dir": [".", "__pycache__"],
+        "context_lines": 1
+    },
     "py2": {
         "with_suffix": [".py"],
         "relative_path": true,
