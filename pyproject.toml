@@ -9,35 +9,38 @@ homepage = "https://github.com/jdum/grygry"
 repository = "https://github.com/jdum/grygry"
 readme = "README.md"
 classifiers = [
-        "Development Status :: 5 - Production/Stable",
-        "Environment :: Console",
-        "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: 3.11",
-        "Programming Language :: Python :: 3.12",
-        "Operating System :: OS Independent",
-        "Topic :: Text Processing",
-        "Topic :: Software Development",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Text Processing",
+    "Topic :: Software Development",
 ]
 packages = [{ include = "grygry" }]
 
 [tool.poetry.scripts]
 gryall = "grygry.grycli:gryall"
+gryall00 = "grygry.grycli:gryall00"
 grycfg = "grygry.grycli:grycfg"
 grycss = "grygry.grycli:grycss"
 gryhtml = "grygry.grycli:gryhtml"
+gryhtml00 = "grygry.grycli:gryhtml00"
 gryhtmlall = "grygry.grycli:gryhtmlall"
 gryjs = "grygry.grycli:gryjs"
 gryjson = "grygry.grycli:gryjson"
 grymd = "grygry.grycli:grymd"
 grynopy = "grygry.grycli:grynopy"
-grypath = "grygry.grycli:grypath"
 grypy = "grygry.grycli:grypy"
-grypyt = "grygry.grycli:grypyt"
+grypy00 = "grygry.grycli:grypy00"
 grypy0 = "grygry.grycli:grypy0"
 grypy2 = "grygry.grycli:grypy2"
+grypyt = "grygry.grycli:grypyt"
 gryrb = "grygry.grycli:gryrb"
+gryrb00 = "grygry.grycli:gryrb00"
 gryrb0 = "grygry.grycli:gryrb0"
 grysh = "grygry.grycli:grysh"
 grytoml = "grygry.grycli:grytoml"
@@ -86,57 +89,57 @@ target-version = "py312"
 line-length = 88
 fix = true
 lint.select = [
-        # flake8-2020
-        "YTT",
-        # flake8-bandit
-        "S",
-        # flake8-bugbear
-        "B",
-        # flake8-builtins
-        "A",
-        # flake8-comprehensions
-        "C4",
-        # flake8-debugger
-        "T10",
-        # flake8-simplify
-        "SIM",
-        # isort
-        "I",
-        # mccabe
-        "C90",
-        # pycodestyle
-        "E",
-        "W",
-        # pyflakes
-        "F",
-        # pygrep-hooks
-        "PGH",
-        # pyupgrade
-        "UP",
-        # ruff
-        "RUF",
-        # tryceratops
-        "TRY",
+    # flake8-2020
+    "YTT",
+    # flake8-bandit
+    "S",
+    # flake8-bugbear
+    "B",
+    # flake8-builtins
+    "A",
+    # flake8-comprehensions
+    "C4",
+    # flake8-debugger
+    "T10",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # mccabe
+    "C90",
+    # pycodestyle
+    "E",
+    "W",
+    # pyflakes
+    "F",
+    # pygrep-hooks
+    "PGH",
+    # pyupgrade
+    "UP",
+    # ruff
+    "RUF",
+    # tryceratops
+    "TRY",
 ]
 lint.ignore = [
-        # LineTooLong
-        "E501",
-        # DoNotAssignLambda
-        "E731",
-        # Use specific rule codes when ignoring type issues
-        "PGH003",
-        # check for execution of untrusted input
-        "S603",
-        # Class attribute `open` is shadowing a Python builtin
-        "A003",
-        # Use `X | Y` in `isinstance` call instead of `(X, Y)`
-        "UP038",
-        # Avoid specifying long messages outside the exception class
-        "TRY003",
-        # Use ternary operator
-        "SIM108",
-        # Use of `assert` detected
-        "S101",
+    # LineTooLong
+    "E501",
+    # DoNotAssignLambda
+    "E731",
+    # Use specific rule codes when ignoring type issues
+    "PGH003",
+    # check for execution of untrusted input
+    "S603",
+    # Class attribute `open` is shadowing a Python builtin
+    "A003",
+    # Use `X | Y` in `isinstance` call instead of `(X, Y)`
+    "UP038",
+    # Avoid specifying long messages outside the exception class
+    "TRY003",
+    # Use ternary operator
+    "SIM108",
+    # Use of `assert` detected
+    "S101",
 ]
 
 [tool.ruff.lint.per-file-ignores]

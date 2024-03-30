@@ -2,9 +2,9 @@
   "_default_": {
     "show_unicode_error": false,
     "sort_files": true,
-    "relative_path": false,
+    "relative_path": true,
     "path_only": false,
-    "context_lines": 0,
+    "context_lines": 1,
     "with_suffix": [],
     "no_suffix": [
       ".png",
@@ -19,34 +19,38 @@
     "no_start_dir": [".", "__pycache__"],
     "no_start_file": [".", "~"]
   },
-  "all": { "relative_path": true, "no_start_dir": ["__pycache__"] },
+  "all": {
+    "no_start_dir": ["__pycache__"]
+  },
+  "all00": {
+    "no_start_dir": ["__pycache__"],
+    "path_only": true
+  },
   "py": {
-    "with_suffix": [".py"],
-    "relative_path": true,
-    "no_start_dir": [".", "__pycache__", "tests"],
-    "context_lines": 1
+    "with_suffix": [".py", ".pxi"],
+    "no_start_dir": [".", "__pycache__", "tests"]
   },
   "pyt": {
-    "with_suffix": [".py"],
-    "relative_path": true,
-    "no_start_dir": [".", "__pycache__"],
-    "context_lines": 1
+    "with_suffix": [".py", ".pxi"],
+    "no_start_dir": [".", "__pycache__"]
   },
-  "py2": {
-    "with_suffix": [".py"],
-    "relative_path": true,
+  "py00": {
+    "with_suffix": [".py", ".pxi"],
     "no_start_dir": [".", "__pycache__", "tests"],
-    "context_lines": 2
+    "path_only": true
   },
   "py0": {
-    "with_suffix": [".py"],
-    "relative_path": true,
+    "with_suffix": [".py", ".pxi"],
     "no_start_dir": [".", "__pycache__", "tests"],
     "context_lines": 0
   },
+  "py2": {
+    "with_suffix": [".py", ".pxi"],
+    "no_start_dir": [".", "__pycache__", "tests"],
+    "context_lines": 2
+  },
   "nopy": {
     "no_start_dir": [".", "__pycache__", "tests"],
-    "context_lines": 1,
     "no_suffix": [
       ".py",
       ".png",
@@ -58,24 +62,45 @@
       ".orig"
     ]
   },
-  "md": { "with_suffix": [".md", ".MD"] },
-  "txt": { "with_suffix": [".txt", ".TXT"] },
-  "cfg": { "with_suffix": [".cfg", ".ini", ".INI", ".CFG"] },
+  "md": {
+    "with_suffix": [".md", ".MD"]
+  },
+  "txt": {
+    "with_suffix": [".txt", ".TXT"]
+  },
+  "cfg": {
+    "with_suffix": [".cfg", ".ini", ".INI", ".CFG"]
+  },
   "rb": {
+    "with_suffix": [".rb"]
+  },
+  "rb00": {
     "with_suffix": [".rb"],
-    "relative_path": true,
-    "context_lines": 1
+    "path_only": true
   },
   "rb0": {
     "with_suffix": [".rb"],
-    "relative_path": true,
     "context_lines": 0
   },
-  "js": { "with_suffix": [".js", ".JS", ".ts", ".vue"] },
-  "css": { "with_suffix": [".css", ".CSS"] },
-  "json": { "with_suffix": [".json", ".JSON"] },
-  "toml": { "with_suffix": [".toml", ".TOML"] },
-  "html": { "with_suffix": [".html", ".htm", ".HTML", ".HTM"] },
+  "js": {
+    "with_suffix": [".js", ".JS", ".ts", ".vue"]
+  },
+  "css": {
+    "with_suffix": [".css", ".CSS"]
+  },
+  "json": {
+    "with_suffix": [".json", ".JSON"]
+  },
+  "toml": {
+    "with_suffix": [".toml", ".TOML"]
+  },
+  "html": {
+    "with_suffix": [".html", ".htm", ".HTML", ".HTM"]
+  },
+  "html00": {
+    "with_suffix": [".html", ".htm", ".HTML", ".HTM"],
+    "path_only": true
+  },
   "htmlall": {
     "with_suffix": [
       ".html",
@@ -94,9 +119,7 @@
     "context_lines": 2,
     "with_suffix": [".yml", ".yaml", ".YML", ".YAML"]
   },
-  "sh": { "with_suffix": [".sh"] },
-  "path": {
-    "relative_path": true,
-    "path_only": true
+  "sh": {
+    "with_suffix": [".sh"]
   }
 }
