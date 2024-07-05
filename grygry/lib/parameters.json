@@ -95,16 +95,17 @@
     "with_suffix": [".toml", ".TOML"]
   },
   "html": {
-    "with_suffix": [".html", ".htm", ".HTML", ".HTM"]
+    "with_suffix": [".html", ".htm", ".HTML", ".HTM", ".j2"]
   },
   "html00": {
-    "with_suffix": [".html", ".htm", ".HTML", ".HTM"],
+    "with_suffix": [".html", ".htm", ".HTML", ".HTM", ".j2"],
     "path_only": true
   },
   "htmlall": {
     "with_suffix": [
       ".html",
       ".htm",
+      ".j2",
       ".js",
       ".ts",
       ".vue",
