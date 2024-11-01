@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "grygry"
-version = "2.5.8"
+version = "2.6.0"
 description = "Command line utility to grep different types of source code."
 license = "MIT"
 authors = ["Jerome Dumonteil <jerome.dumonteil@gmail.com>"]
@@ -16,6 +16,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Operating System :: OS Independent",
     "Topic :: Text Processing",
     "Topic :: Software Development",
@@ -23,29 +24,42 @@ classifiers = [
 packages = [{ include = "grygry" }]
 
 [tool.poetry.scripts]
+grygry_functions = "grygry.grycli:grygry_functions"
 gryall = "grygry.grycli:gryall"
 gryall00 = "grygry.grycli:gryall00"
-grycfg = "grygry.grycli:grycfg"
-grycss = "grygry.grycli:grycss"
-gryhtml = "grygry.grycli:gryhtml"
-gryhtml00 = "grygry.grycli:gryhtml00"
-gryhtmlall = "grygry.grycli:gryhtmlall"
-gryjs = "grygry.grycli:gryjs"
-gryjson = "grygry.grycli:gryjson"
-grymd = "grygry.grycli:grymd"
-grynopy = "grygry.grycli:grynopy"
 grypy = "grygry.grycli:grypy"
 grypy00 = "grygry.grycli:grypy00"
+grypyt = "grygry.grycli:grypyt"
+grypyt00 = "grygry.grycli:grypyt00"
 grypy0 = "grygry.grycli:grypy0"
 grypy2 = "grygry.grycli:grypy2"
-grypyt = "grygry.grycli:grypyt"
+grynopy = "grygry.grycli:grynopy"
+grynopy00 = "grygry.grycli:grynopy00"
+grymd = "grygry.grycli:grymd"
+grymd00 = "grygry.grycli:grymd00"
+grytxt = "grygry.grycli:grytxt"
+grytxt00 = "grygry.grycli:grytxt00"
+grycfg = "grygry.grycli:grycfg"
+grycfg00 = "grygry.grycli:grycfg00"
 gryrb = "grygry.grycli:gryrb"
 gryrb00 = "grygry.grycli:gryrb00"
 gryrb0 = "grygry.grycli:gryrb0"
-grysh = "grygry.grycli:grysh"
+gryjs = "grygry.grycli:gryjs"
+gryjs00 = "grygry.grycli:gryjs00"
+grycss = "grygry.grycli:grycss"
+grycss00 = "grygry.grycli:grycss00"
+gryjson = "grygry.grycli:gryjson"
+gryjson00 = "grygry.grycli:gryjson00"
 grytoml = "grygry.grycli:grytoml"
-grytxt = "grygry.grycli:grytxt"
+grytoml00 = "grygry.grycli:grytoml00"
+gryhtml = "grygry.grycli:gryhtml"
+gryhtml00 = "grygry.grycli:gryhtml00"
+gryhtmlall = "grygry.grycli:gryhtmlall"
+gryhtmlall00 = "grygry.grycli:gryhtmlall00"
 gryyml = "grygry.grycli:gryyml"
+gryyml00 = "grygry.grycli:gryyml00"
+grysh = "grygry.grycli:grysh"
+grysh00 = "grygry.grycli:grysh00"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
@@ -55,13 +69,9 @@ poetry = ">=1.8"
 pytest = ">=7.0"
 pytest-cov = ">=4.0.0"
 tox = "^4"
-ruff = ">=0.3.4"
-black = ">=22.0"
+ruff = ">=0.7.1"
 isort = ">=5.12.0"
 coverage = ">=7.0"
-deptry = ">=0.6.4"
-mypy = ">=0.981"
-pre-commit = "^2.20.0"
 
 [build-system]
 requires = ["poetry-core>=1.8.0"]
@@ -69,23 +79,13 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 88
-target-version = ['py312']
+target-version = ["py312"]
 
 [tool.isort]
 profile = "black"
 
-[tool.mypy]
-files = ["grygry"]
-disallow_untyped_defs = "True"
-disallow_any_unimported = "True"
-no_implicit_optional = "True"
-check_untyped_defs = "True"
-warn_return_any = "True"
-warn_unused_ignores = "True"
-show_error_codes = "True"
-
 [tool.ruff]
-target-version = "py312"
+target-version = "py313"
 line-length = 88
 fix = true
 lint.select = [
@@ -143,7 +143,7 @@ lint.ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*" = ["S101"]
+"tests/*" = ["S101", "RUF005"]
 
 [tool.coverage.report]
 skip_empty = true

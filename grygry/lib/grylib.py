@@ -1,6 +1,7 @@
 import contextlib
 import sys
 from pathlib import Path
+from typing import Any
 
 
 class NoPatternError(ValueError):
@@ -8,7 +9,7 @@ class NoPatternError(ValueError):
 
 
 class Grygry:
-    def __init__(self, config: dict):
+    def __init__(self, config: dict[str, Any]) -> None:
         self.show_unicode_error = config.get("show_unicode_error", False)
         self.sort_files = config.get("sort_files", False)
         self.relative_path = config.get("relative_path", False)
@@ -21,6 +22,14 @@ class Grygry:
         self.pattern = ""
         self.path = Path()
         self.found = {}
+        self._adapt_suffixes()
+
+    def _adapt_suffixes(self) -> None:
+        def _lower_upper(content: set) -> set:
+            return {x.lower() for x in content} | {x.upper() for x in content}
+
+        self.no_suffix = _lower_upper(self.no_suffix)
+        self.with_suffix = _lower_upper(self.with_suffix)
 
     def search(self) -> None:
         if len(sys.argv) < 2:

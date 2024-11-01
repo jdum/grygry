@@ -16,41 +16,32 @@
       ".lock",
       ".orig"
     ],
-    "no_start_dir": [".", "__pycache__"],
+    "no_start_dir": [".", "__pycache__", "build", ".venv"],
     "no_start_file": [".", "~"]
   },
   "all": {
     "no_start_dir": ["__pycache__"]
   },
-  "all00": {
-    "no_start_dir": ["__pycache__"],
-    "path_only": true
-  },
   "py": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "tests"]
+    "no_start_dir": [".", "__pycache__", "tests", "dist", "build"]
   },
   "pyt": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__"]
-  },
-  "py00": {
-    "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "tests"],
-    "path_only": true
+    "no_start_dir": [".", "__pycache__", "dist", "build"]
   },
   "py0": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "tests"],
+    "no_start_dir": [".", "__pycache__", "tests", "dist", "build"],
     "context_lines": 0
   },
   "py2": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "tests"],
+    "no_start_dir": [".", "__pycache__", "tests", "dist", "build"],
     "context_lines": 2
   },
   "nopy": {
-    "no_start_dir": [".", "__pycache__", "tests"],
+    "no_start_dir": [".", "__pycache__", "tests", "dist", "build"],
     "no_suffix": [
       ".py",
       ".png",
@@ -63,62 +54,42 @@
     ]
   },
   "md": {
-    "with_suffix": [".md", ".MD"]
+    "with_suffix": [".md"]
   },
   "txt": {
-    "with_suffix": [".txt", ".TXT"]
+    "with_suffix": [".txt"]
   },
   "cfg": {
-    "with_suffix": [".cfg", ".ini", ".INI", ".CFG"]
+    "with_suffix": [".cfg", ".ini"]
   },
   "rb": {
     "with_suffix": [".rb"]
-  },
-  "rb00": {
-    "with_suffix": [".rb"],
-    "path_only": true
   },
   "rb0": {
     "with_suffix": [".rb"],
     "context_lines": 0
   },
   "js": {
-    "with_suffix": [".js", ".JS", ".ts", ".vue"]
+    "with_suffix": [".js", ".ts", ".vue"]
   },
   "css": {
-    "with_suffix": [".css", ".CSS"]
+    "with_suffix": [".css"]
   },
   "json": {
-    "with_suffix": [".json", ".JSON"]
+    "with_suffix": [".json"]
   },
   "toml": {
-    "with_suffix": [".toml", ".TOML"]
+    "with_suffix": [".toml"]
   },
   "html": {
-    "with_suffix": [".html", ".htm", ".HTML", ".HTM", ".j2"]
-  },
-  "html00": {
-    "with_suffix": [".html", ".htm", ".HTML", ".HTM", ".j2"],
-    "path_only": true
+    "with_suffix": [".html", ".htm", ".j2"]
   },
   "htmlall": {
-    "with_suffix": [
-      ".html",
-      ".htm",
-      ".j2",
-      ".js",
-      ".ts",
-      ".vue",
-      ".css",
-      ".HTML",
-      ".HTM",
-      ".JS",
-      ".CSS"
-    ]
+    "with_suffix": [".html", ".htm", ".j2", ".js", ".ts", ".vue", ".css"]
   },
   "yml": {
     "context_lines": 2,
-    "with_suffix": [".yml", ".yaml", ".YML", ".YAML"]
+    "with_suffix": [".yml", ".yaml"]
   },
   "sh": {
     "with_suffix": [".sh"]
