@@ -15,9 +15,11 @@ def read_parameters() -> dict[str, Any]:
 def gry_searcher(key: str) -> Callable:
     def searcher():
         parameters = read_parameters()
-        param = parameters["_default_"] | parameters[key]
         if key.endswith("00"):
+            param = parameters["_default_"] | parameters[key[:-2]]
             param["path_only"] = True
+        else:
+            param = parameters["_default_"] | parameters[key]
         grygry = Grygry(param)
         grygry.search()
 
