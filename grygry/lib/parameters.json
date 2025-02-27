@@ -20,28 +20,28 @@
     "no_start_file": [".", "~"]
   },
   "all": {
-    "no_start_dir": ["__pycache__"]
+    "no_start_dir": ["__pycache__", ".venv"]
   },
   "py": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "tests", "dist", "build"]
+    "no_start_dir": [".", "__pycache__", "tests", "dist", "build", ".venv"]
   },
   "pyt": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "dist", "build"]
+    "no_start_dir": [".", "__pycache__", "dist", "build", ".venv"]
   },
   "py0": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "tests", "dist", "build"],
+    "no_start_dir": [".", "__pycache__", "tests", "dist", "build", ".venv"],
     "context_lines": 0
   },
   "py2": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "tests", "dist", "build"],
+    "no_start_dir": [".", "__pycache__", "tests", "dist", "build", ".venv"],
     "context_lines": 2
   },
   "nopy": {
-    "no_start_dir": [".", "__pycache__", "tests", "dist", "build"],
+    "no_start_dir": [".", "__pycache__", "tests", "dist", "build", ".venv"],
     "no_suffix": [
       ".py",
       ".png",
