@@ -65,12 +65,12 @@ grysh00 = "grygry.grycli:grysh00"
 python = ">=3.10,<4.0"
 
 [tool.poetry.group.dev.dependencies]
-poetry = ">=1.8"
-pytest = ">=7.0"
+poetry = "~1.8"
+pytest = ">=8.0"
 pytest-cov = ">=4.0.0"
-tox = "^4"
+tox = ">=4"
 ruff = ">=0.7.1"
-isort = ">=5.12.0"
+isort = ">=5.13.0"
 coverage = ">=7.0"
 
 [build-system]
@@ -85,10 +85,13 @@ target-version = ["py312"]
 profile = "black"
 
 [tool.ruff]
+exclude = [".venv"]
 target-version = "py313"
 line-length = 88
+indent-width = 4
 fix = true
-lint.select = [
+[tool.ruff.lint]
+select = [
     # flake8-2020
     "YTT",
     # flake8-bandit
@@ -121,7 +124,7 @@ lint.select = [
     # tryceratops
     "TRY",
 ]
-lint.ignore = [
+ignore = [
     # LineTooLong
     "E501",
     # DoNotAssignLambda
@@ -151,3 +154,7 @@ skip_empty = true
 [tool.coverage.run]
 branch = true
 source = ["grygry"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
