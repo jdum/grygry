@@ -12,36 +12,80 @@
       ".bmp",
       ".ttf",
       ".svg",
+      ".pdf",
       ".ico",
       ".lock",
-      ".orig"
+      ".orig",
+      ".doc",
+      ".docx",
+      ".odt",
+      ".ods",
+      ".odp",
+      ".xls",
+      ".xlsx",
+      ".gz",
+      ".tgz",
+      ".zip",
+      ".tar",
+      ".sql",
+      ".dump"
     ],
-    "no_start_dir": [".", "__pycache__", "build", ".venv"],
+    "no_start_dir": [".", "__pycache__", "build", "dist", "htmlcov", "tmp"],
     "no_start_file": [".", "~"]
   },
-  "all": {
-    "no_start_dir": ["__pycache__", ".venv"]
-  },
+  "all": {},
   "py": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "tests", "dist", "build", ".venv"]
+    "no_start_dir": [
+      ".",
+      "__pycache__",
+      "build",
+      "dist",
+      "htmlcov",
+      "tests",
+      "tmp"
+    ]
   },
   "pyt": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "dist", "build", ".venv"]
+    "no_start_dir": [".", "__pycache__", "build", "dist", "htmlcov", "tmp"]
   },
   "py0": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "tests", "dist", "build", ".venv"],
+    "no_start_dir": [
+      ".",
+      "__pycache__",
+      "build",
+      "dist",
+      "htmlcov",
+      "tests",
+      "tmp"
+    ],
     "context_lines": 0
   },
   "py2": {
     "with_suffix": [".py", ".pxi"],
-    "no_start_dir": [".", "__pycache__", "tests", "dist", "build", ".venv"],
+    "no_start_dir": [
+      ".",
+      "__pycache__",
+      "build",
+      "dist",
+      "htmlcov",
+      "tests",
+      "tmp"
+    ],
     "context_lines": 2
   },
   "nopy": {
-    "no_start_dir": [".", "__pycache__", "tests", "dist", "build", ".venv"],
+    "no_start_dir": [
+      ".",
+      "__pycache__",
+      "build",
+      "dist",
+      "htmlcov",
+      "tests",
+      "tmp"
+    ],
     "no_suffix": [
       ".py",
       ".png",
@@ -49,8 +93,24 @@
       ".bmp",
       ".ttf",
       ".svg",
+      ".pdf",
       ".ico",
-      ".orig"
+      ".lock",
+      ".bck",
+      ".orig",
+      ".doc",
+      ".docx",
+      ".odt",
+      ".ods",
+      ".odp",
+      ".xls",
+      ".xlsx",
+      ".gz",
+      ".tgz",
+      ".zip",
+      ".tar",
+      ".sql",
+      ".dump"
     ]
   },
   "md": {
