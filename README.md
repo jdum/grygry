@@ -43,5 +43,5 @@ Installation from `Pypi` (recommended):
 
 
 ```python
-pip install grypy
+pip install grygry
 ```

@@ -1,13 +1,11 @@
-[tool.poetry]
+[project]
 name = "grygry"
-version = "2.7.0"
-description = "Command line utility to grep different types of source code."
+version = "2.8.0"
+description = "Command line utility to grep different types of source code"
 license = "MIT"
-authors = ["Jerome Dumonteil <jerome.dumonteil@gmail.com>"]
-keywords = ["code", "source", "grep"]
-homepage = "https://github.com/jdum/grygry"
-repository = "https://github.com/jdum/grygry"
 readme = "README.md"
+authors = [{ name = "Jérôme Dumonteil", email = "jerome.dumonteil@gmail.com" }]
+keywords = ["code", "source", "grep"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
@@ -17,13 +15,19 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Operating System :: OS Independent",
     "Topic :: Text Processing",
     "Topic :: Software Development",
 ]
-packages = [{ include = "grygry" }]
+requires-python = ">=3.10, <4"
+dependencies = []
 
-[tool.poetry.scripts]
+[project.urls]
+Homepage = "https://github.com/jdum/grygry"
+Repository = "https://github.com/jdum/grygry"
+
+[project.scripts]
 grygry_functions = "grygry.grycli:grygry_functions"
 gryall = "grygry.grycli:gryall"
 gryall00 = "grygry.grycli:gryall00"
@@ -61,32 +65,33 @@ gryyml00 = "grygry.grycli:gryyml00"
 grysh = "grygry.grycli:grysh"
 grysh00 = "grygry.grycli:grysh00"
 
-[tool.poetry.dependencies]
-python = ">=3.9,<4.0"
+[dependency-groups]
+dev = [
+    "pytest>=8.4.0",
+    "pytest-cov>=6.2.1",
+    "coverage>=7.10.7",
+    "mypy>=1.18.2",
+    "mypy-extensions>=1.1.0",
+    "typing-extensions>=4.15.0",
+    "tox>=4.31.0",
+    "tox-gh-actions>=3.3.0",
+    "ruff>=0.14.0",
+    "isort>=7.0.0",
+]
 
-[tool.poetry.group.dev.dependencies]
-poetry = "~1.8"
-pytest = ">=8.0"
-pytest-cov = ">=4.0.0"
-tox = ">=4"
-ruff = ">=0.7.1"
-isort = ">=5.13.0"
-coverage = ">=7.0"
+[tool.uv]
+default-groups = ["dev"]
 
 [build-system]
-requires = ["poetry-core>=1.8.0"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.black]
-line-length = 88
-target-version = ["py312"]
+requires = ["uv_build>=0.9.0,<0.10.0"]
+build-backend = "uv_build"
 
 [tool.isort]
 profile = "black"
 
 [tool.ruff]
+target-version = "py314"
 exclude = [".venv"]
-target-version = "py313"
 line-length = 88
 indent-width = 4
 fix = true
@@ -135,8 +140,6 @@ ignore = [
     "S603",
     # Class attribute `open` is shadowing a Python builtin
     "A003",
-    # Use `X | Y` in `isinstance` call instead of `(X, Y)`
-    "UP038",
     # Avoid specifying long messages outside the exception class
     "TRY003",
     # Use ternary operator
@@ -148,6 +151,10 @@ ignore = [
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101", "RUF005"]
 
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+
 [tool.coverage.report]
 skip_empty = true
 
@@ -155,6 +162,12 @@ skip_empty = true
 branch = true
 source = ["grygry"]
 
-[tool.pytest.ini_options]
-minversion = "8.0"
-testpaths = ["tests"]
+[tool.mypy]
+files = ["src/grygry"]
+disallow_untyped_defs = true
+disallow_any_unimported = false
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true
