@@ -17,6 +17,7 @@ class Grygry:
         self.context_lines = config.get("context_lines", 0)
         self.with_suffix = set(config.get("with_suffix", []))
         self.no_suffix = set(config.get("no_suffix", []))
+        self.no_dir = config.get("no_dir", ["__pycache__", "build", "dist", "tmp"])
         self.no_start_dir = config.get("no_start_dir", ["."])
         self.no_start_file = config.get("no_start_file", [".", "~"])
         self.pattern = ""
@@ -44,6 +45,9 @@ class Grygry:
 
     def grep_folder(self, path: Path) -> None:
         self.path = path
+        for no_dir in self.no_dir:
+            if self.path.name == no_dir:
+                return
         for no_start in self.no_start_dir:
             if self.path.name.startswith(no_start):
                 return
