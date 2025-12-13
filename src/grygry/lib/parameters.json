@@ -42,7 +42,7 @@
   },
   "pyt": {
     "with_suffix": [".py", ".pxi"],
-    "no_dir": ["__pycache__", "build", "dist", "htmlcov", "tests", "tmp"],
+    "no_dir": ["__pycache__", "build", "dist", "htmlcov", "tmp"],
     "no_start_dir": ["."]
   },
   "py0": {
