@@ -1,6 +1,6 @@
 [project]
 name = "grygry"
-version = "2.9.0"
+version = "2.10.0"
 description = "Command line utility to grep different types of source code"
 license = "MIT"
 readme = "README.md"
@@ -72,15 +72,15 @@ grysh00 = "grygry.grycli:grysh00"
 
 [dependency-groups]
 dev = [
-    "pytest>=8.4.0",
-    "pytest-cov>=6.2.1",
-    "coverage>=7.10.7",
-    "mypy>=1.18.2",
+    "pytest>=9.0.2",
+    "pytest-cov>=7.0.0",
+    "coverage>=7.13.0",
+    "mypy>=1.19.0",
     "mypy-extensions>=1.1.0",
     "typing-extensions>=4.15.0",
-    "tox>=4.31.0",
+    "tox>=4.32.0",
     "tox-gh-actions>=3.3.0",
-    "ruff>=0.14.0",
+    "ruff>=0.14.9",
     "isort>=7.0.0",
 ]
 
